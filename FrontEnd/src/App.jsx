@@ -1,12 +1,20 @@
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+import Create from './pages/Create.jsx';
 
 function App() {
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-      </h1>
-    </>
+    <Router>
+    <div className="min-h-screen bg-gray-900">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<Create />} />
+      </Routes>
+    </div>
+  </Router>
   )
 }
 
