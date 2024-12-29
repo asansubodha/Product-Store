@@ -6,15 +6,15 @@ import Create from './pages/Create.jsx';
 function App() {
 
   return (
+   <>
+    <Navbar />
     <Router>
-    <div className="min-h-screen bg-gray-900">
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
       </Routes>
-    </div>
-  </Router>
+    </Router>
+   </>
   )
 }
 
